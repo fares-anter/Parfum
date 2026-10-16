@@ -1,0 +1,119 @@
+
+:root{
+ --kreeem-color:hsl(30, 38%, 92%);
+ --black-color:hsl(212, 21%, 14%);
+ --grey-color:hsl(228, 12%, 48%);
+ --whit-color:hsl(0, 0%, 100%);
+ --green500-color:hsl(158, 36%, 37%);
+ --green700-color:hsl(158, 42%, 18%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat",sans-serif;
+    background-color:var(--kreeem-color);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+.product{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    max-width: 600px;
+    margin: 1rem;
+    align-items: stretch;
+    overflow: hidden;
+}
+img,picture{
+     display: block;
+    max-width: 100%;
+   
+    
+}
+.product .product-content{
+    padding: 2rem;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product img{
+     border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-content .catgory{
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--grey-color);
+    padding: 10px;
+    text-transform: uppercase;
+
+}
+ .product .product-content h2{
+    font-size: 32px;
+    font-family: "Fraunces" ,sans-serif;
+    margin: 20px 0;
+    line-height: 1;
+    color: var(--black-color);
+}
+ .product .product-content .x{
+    font-size: 14px;
+    
+    line-height: 1.6;
+    color: var(--grey-color);
+ }
+ .product .product-content .praise{
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+ }
+
+.product .product-content .praise .discont-praise{
+    font-size: 30px;
+    color: var(--green500-color);
+    margin-right: 20px;
+    font-family: "Fraunces" ,sans-serif;
+}
+
+.product .product-content .btn{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    color:#fff;
+    font-weight: 700;
+    background-color: var(--green500-color);
+    cursor: pointer;
+
+}
+.product .product-content .btn i{
+    margin-right: 10px;
+}
+ 
+    
+@media(max-width:700px){
+    .product{ grid-template-columns: 1fr;}
+     .product img{ border-top-left-radius: 10px;
+    border-top-right-radius: 10px;}
+.product .product-content{ border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px; }
+}
+
+
+
+
+
+
